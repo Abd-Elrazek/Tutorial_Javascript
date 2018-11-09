@@ -1,10 +1,14 @@
-(function () {
-	"use strict";
-	// Start your code here
-	function greetions(your_name) {
-		alert('Your name is : ' + your_name);
-		console.log('your name is : ' + your_name)
+function roughScale(base) {
+	var parsed = parseInt(base);
+	console.log(parsed);
+	if (isNaN(parsed)) {
+		return 0
 	}
-	greetions('abdelrazek');
-	// End your code here
-})();
+	return parsed * 100;
+}
+
+console.log(roughScale(16));
+// expected output: 1500
+
+console.log(roughScale('88'));
+// expected output: 0
