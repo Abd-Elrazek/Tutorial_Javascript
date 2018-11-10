@@ -1,5 +1,19 @@
-"use strict";
-var x = 1; {
-	var x = 2;
+function imgLoad('index.html') {
+	return new Promise(function (resolve, reject) {
+		var request = new XMLHttpRequest();
+		request.open('GET', url);
+		request.responseType = 'blob';
+		request.onload = function () {
+			if (request.status === 200) {
+				resolve(request.response);
+			} else {
+				reject(Error('Image didn\'t load successfully; error code:' +
+					request.statusText));
+			}
+		};
+		request.onerror = function () {
+			reject(Error('There was a network error.'));
+		};
+		request.send();
+	});
 }
-console.log(x); // outputs 2
