@@ -1,5 +1,5 @@
-var str = 'this string \
-is broken \
-across multiple \
-lines.'
-console.log(str); // this string is broken across multiple lines.
+"use strict";
+var x = 1; {
+	var x = 2;
+}
+console.log(x); // outputs 2
