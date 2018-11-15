@@ -7,3 +7,13 @@ In contrast to Java's compile-time system of classes built by declarations, Java
 **JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.**
 Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting Java bytecodes. Java's class-based model means that programs consist exclusively of classes and their methods. Java's class inheritance and strong typing generally require tightly coupled object hierarchies. These requirements make Java programming more complex than JavaScript programming.
 In contrast, JavaScript descends in spirit from a line of smaller, dynamically typed languages such as HyperTalk and dBASE. These scripting languages offer programming tools to a much wider audience because of their easier syntax, specialized built-in functionality, and minimal requirements for object creation.
+
+- __Javascript__ : In JavaScript, a function can be defined based on a condition. For example, the following function definition defines myFunc only if num equals 0:
+```javascript
+var myFunc;
+if (num === 0) {
+  myFunc = function(theObject) {
+    theObject.make = 'Toyota';
+  }
+}
+```
