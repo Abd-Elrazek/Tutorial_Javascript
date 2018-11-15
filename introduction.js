@@ -1,13 +1,17 @@
-var i = 0;
-var n = 0;
-while (i < 5) {
-  console.log('i before if condition is : ' + i);
-  if (i == 3) {
-	  console.log("i before continue : " + i);
-	  console.log("i after continue : " + i);
-  }
-  n += i;
-  console.log(n);
-  i++;
+// I try to pass function in java but not work  but in javascript is okey
+/*
+function f (b){
+	return b + " -f";
 }
-//1,3,7,12
+
+function map(f, a) {
+  var result = [],i; // Create a new Array
+  for (i = 0; i != a.length; i++)
+    result[i] = f(a[i]);
+  return result;
+}
+
+var x = map(f,["name","address", "game"]);
+console.log(x);
+*/
+
