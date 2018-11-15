@@ -32,3 +32,18 @@ a = addSquares(2, 3); // returns 13
 b = addSquares(3, 4); // returns 25
 c = addSquares(4, 5); // returns 41
 ```
+
+Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
+```javascript
+function outside(x) {
+  function inside(y) {
+    return x + y;
+  }
+  return inside;
+}
+fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give
+                        // it
+result = fn_inside(5); //returns 8 , 3 for outside function and 5 for outwr function// returns 8 , 3 for outside function and 5 for outwr function
+
+result1 = outside(3)(5); // returns 8
+```

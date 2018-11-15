@@ -15,11 +15,16 @@ var x = map(f,["name","address", "game"]);
 console.log(x);
 */
 
-function foo(i) {
-  if (i < 0)
-    return;
-  console.log('begin: ' + i);
-  foo(i - 1);
-  console.log('end: ' + i);
+function outside(x) {
+  function inside(y) {
+	  console.log(y);
+    return x + y;
+  }
+  return inside;
 }
-foo(3);
+fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give
+                        // it
+result = fn_inside(5); // returns 8
+console.log(result);
+result1 = outside(3)(5); // returns 8 , 3 for outside function and 5 for outwr function
+
